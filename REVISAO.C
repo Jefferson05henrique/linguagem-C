@@ -107,12 +107,14 @@ void vetores2(void) {
 }
 
 void matriz(void) {
-    int matr[5][5] = { {1, 2, 3, 5}, {5, -3, 1, -2}, {3, 6, 2, 8}};
+    // define a variavel matriz MATR e dentro dela coloca apenas 3 linhas e colunas e tudo bem, mas o limite é 5 linhas e 5 colunas.
+    int matr[5][5] = { {1, 2, 3, 5}, {5, -3, 1, -2}, {3, 6, 2, 8}}; 
 
     int i,
     soma = 0;
 
     for (i = 0; i < 4; i++) {
+        // soma começa em 0, i começa também em 0, enquanto o número que for i for menor que 4 o laço continuará, em soma ele tá buscando a linha 0 [0] e o número que estiver em i que agora é 0, então seria [0][0] e o primeiro número é 1, assim ao final o soma faz a soma da primeira que linha, assim imprimindo 11.
         soma += matr[0][i];
     };
 

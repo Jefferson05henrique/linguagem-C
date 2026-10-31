@@ -105,6 +105,19 @@ void vetores2(void) {
 
     printf("%d\n", vetor[i]); // imprime na tela o valor digitado pelo usuario para a posicao i do vetor
 }
+
+void matriz(void) {
+    int matr[5][5] = { {1, 2, 3, 5}, {5, -3, 1, -2}, {3, 6, 2, 8}};
+
+    int i,
+    soma = 0;
+
+    for (i = 0; i < 4; i++) {
+        soma += matr[0][i];
+    };
+
+    printf("\n soma = %d\n", soma);
+}
  
 int main(void)
 {
@@ -119,6 +132,7 @@ int main(void)
     printf("Digite 6 para Contador\n");
     printf("Digite 7 para Vetores\n");
     printf("Digite 8 para Vetores2\n");
+    printf("Digite 9 para matriz\n");
     printf("Escolha: ");
     scanf("%d", &opcao);
 
@@ -158,6 +172,11 @@ int main(void)
     {
         vetores2();
     }
+    else if (opcao == 9)
+    {
+        matriz();
+    }
+    
     else
     {
         printf("Opcao invalida.\n");
